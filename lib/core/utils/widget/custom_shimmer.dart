@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/constant.dart';
+import '../../../constant.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CustomShimmer extends StatelessWidget {

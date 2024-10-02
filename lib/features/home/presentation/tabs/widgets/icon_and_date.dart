@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/constant.dart';
-import 'package:news_app/core/helpers/date_formate.dart';
+import '../../../../../constant.dart';
+import '../../../../../core/helpers/date_formate.dart';
 
 class IconAndDate extends StatelessWidget {
   final String date;

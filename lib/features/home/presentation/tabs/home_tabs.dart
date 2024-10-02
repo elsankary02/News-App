@@ -1,11 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/utils/widget/custom_error_massage.dart';
-import 'package:news_app/features/home/data/manger/featch_home_slider/featch_home_slider_cubit.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/carousel_slider_widget.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/future_programming_widget.dart';
-import 'package:news_app/features/home/presentation/shimmer/view/shimmer_home_tabs.dart';
+import '../../../../core/utils/widget/custom_error_massage.dart';
+import '../../data/manger/featch_home_slider/featch_home_slider_cubit.dart';
+import 'screens/future_programming_screen.dart';
+import 'widgets/carousel_slider_widget.dart';
+import 'widgets/future_programming_widget.dart';
+import '../shimmer/view/shimmer_home_tabs.dart';
 
 class HomeTabs extends StatefulWidget {
   const HomeTabs({super.key});
@@ -38,8 +39,11 @@ class _HomeTabsState extends State<HomeTabs> {
                     Text(
                       'View all',
                       style: TextStyle(
+                        decoration:TextDecoration.underline,
+                        decorationColor: theme.primaryColor,
+                        decorationThickness: 2,
                           color: theme.primaryColor,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,),
                     ),
                   ],
                 ),
@@ -97,11 +101,17 @@ class _HomeTabsState extends State<HomeTabs> {
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      'View all',
-                      style: TextStyle(
-                          color: theme.primaryColor,
-                          fontWeight: FontWeight.bold),
+                    GestureDetector(
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FutureProgrammingScreen(),),),
+                      child: Text(
+                        'View all',
+                        style: TextStyle(
+                            decoration:TextDecoration.underline,
+                          decorationColor: theme.primaryColor,
+                          decorationThickness: 2,
+                            color: theme.primaryColor,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ],
                 ),

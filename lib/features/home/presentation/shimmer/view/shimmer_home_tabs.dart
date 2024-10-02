@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/constant.dart';
-import 'package:news_app/features/home/presentation/shimmer/widget/shimmer_details_widget.dart';
-import 'package:news_app/features/home/presentation/shimmer/widget/shimmer_slider_widget.dart';
+import '../../../../../constant.dart';
+import '../widget/shimmer_details_widget.dart';
+import '../widget/shimmer_slider_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ShimmerHomeTabs extends StatelessWidget {

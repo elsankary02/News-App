@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:news_app/constant.dart';
-import 'package:news_app/features/home/data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
+import '../../../../../constant.dart';
+import '../../../data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
 
 class TextFiledWidget extends StatelessWidget {
   const TextFiledWidget({super.key});

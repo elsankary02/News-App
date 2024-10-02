@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:news_app/features/home/views/home_view.dart';
+import '../../features/home/views/home_view.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/HomeView';

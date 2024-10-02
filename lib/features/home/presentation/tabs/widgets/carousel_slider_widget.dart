@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/core/utils/widget/custom_shimmer.dart';
-import 'package:news_app/features/home/data/models/news_models.dart';
+import '../../../../../core/utils/widget/custom_shimmer.dart';
+import '../../../data/models/news_models.dart';
 
 class CarouselSliderWidget extends StatelessWidget {
   final Articles articles;

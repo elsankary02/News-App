@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:news_app/features/home/presentation/tabs/view/global_tabs.dart';
-import 'package:news_app/features/home/presentation/tabs/view/home_tabs.dart';
-import 'package:news_app/features/home/presentation/tabs/view/profile_tabs.dart';
-import 'package:news_app/features/home/presentation/tabs/view/search_tabs.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/switch_widget.dart';
+import '../presentation/tabs/global_tabs.dart';
+import '../presentation/tabs/home_tabs.dart';
+import '../presentation/tabs/profile_tabs.dart';
+import '../presentation/tabs/search_tabs.dart';
+import '../presentation/tabs/widgets/switch_widget.dart';
 
 class GNavBarView extends StatefulWidget {
   const GNavBarView({super.key});

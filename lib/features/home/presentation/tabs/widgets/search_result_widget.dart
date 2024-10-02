@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/utils/widget/custom_error_massage.dart';
-import 'package:news_app/features/home/data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
-import 'package:news_app/features/home/presentation/shimmer/view/shimmer_card_details.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/card_details_widget.dart';
+import '../../../../../core/utils/widget/custom_error_massage.dart';
+import '../../../data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
+import '../../shimmer/view/shimmer_card_details.dart';
+import 'card_details_widget.dart';
 
 class SearchResultWidget extends StatelessWidget {
   const SearchResultWidget({super.key});

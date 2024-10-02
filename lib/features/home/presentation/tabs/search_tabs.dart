@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/utils/api_service.dart';
-import 'package:news_app/features/home/data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/search_result_widget.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/search_tabs_widget.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/text_filed_widget.dart';
+import '../../../../core/utils/api_service.dart';
+import '../../data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
+import 'widgets/search_result_widget.dart';
+import 'widgets/search_tabs_widget.dart';
+import 'widgets/text_filed_widget.dart';
 
 class SearchTabs extends StatelessWidget {
   const SearchTabs({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/constant.dart';
-import 'package:news_app/features/home/data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/details_tabs_widget.dart';
+import '../../../../../constant.dart';
+import '../../../data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
+import 'details_tabs_widget.dart';
 
 class SearchTabsWidget extends StatefulWidget {
   const SearchTabsWidget({super.key});

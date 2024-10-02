@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/features/home/presentation/tabs/widgets/linkes_profile_widget.dart';
+import 'widgets/linkes_profile_widget.dart';
 
 class ProfileTabs extends StatelessWidget {
   const ProfileTabs({super.key});
