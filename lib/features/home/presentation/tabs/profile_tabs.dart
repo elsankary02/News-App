@@ -9,7 +9,8 @@ class ProfileTabs extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                   padding: const EdgeInsets.only(right:15 ,left:15 ,top:25 ),
+
       child: Column(
         children: [
           const SizedBox(

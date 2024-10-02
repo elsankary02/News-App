@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../../../constant.dart';
-import '../widget/shimmer_details_widget.dart';
-import '../widget/shimmer_slider_widget.dart';
+import 'package:news_app/constant.dart';
+import 'package:news_app/features/home/presentation/shimmer/widget/shimmer_details_widget.dart';
+import 'package:news_app/features/home/presentation/shimmer/widget/shimmer_slider_widget.dart';
+
+
 import 'package:shimmer/shimmer.dart';
 
 class ShimmerHomeTabs extends StatelessWidget {
@@ -9,12 +11,13 @@ class ShimmerHomeTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Shimmer.fromColors(
-        baseColor: AppColors.lightGrey,
-        highlightColor: Colors.grey,
-        period: const Duration(seconds: 2),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+    return Padding(
+                  padding: const EdgeInsets.only(right:15 ,left:15 ,top:25 ),
+
+      child: Shimmer.fromColors(
+          baseColor: AppColors.lightGrey,
+          highlightColor: Colors.grey,
+          period: const Duration(seconds: 2),
           child: SafeArea(
             child: Column(
               children: [
@@ -22,7 +25,7 @@ class ShimmerHomeTabs extends StatelessWidget {
                   height: 10,
                 ),
                 Row(
-                  
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       height: 25,
@@ -32,7 +35,7 @@ class ShimmerHomeTabs extends StatelessWidget {
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
-                  
+                   
                   ],
                 ),
                 const SizedBox(
@@ -89,7 +92,7 @@ class ShimmerHomeTabs extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-        ));
+          )),
+    );
   }
 }

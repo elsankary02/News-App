@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../../constant.dart';
-import '../widget/shimmer_details_widget.dart';
+import 'package:news_app/constant.dart';
+import 'package:news_app/features/home/presentation/shimmer/widget/shimmer_details_widget.dart';
+
 import 'package:shimmer/shimmer.dart';
 
 class CardDetailsShimmer extends StatelessWidget {
@@ -12,27 +13,24 @@ class CardDetailsShimmer extends StatelessWidget {
       baseColor: AppColors.lightGrey,
       highlightColor: Colors.grey,
       period: const Duration(seconds: 2),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 10,
+      child: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                physics: const BouncingScrollPhysics(),
+                itemCount: 15,
+                itemBuilder: (context, index) {
+                  return const ShimmerDetailsWidget();
+                },
               ),
-              Expanded(
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: 15,
-                  itemBuilder: (context, index) {
-                    return const ShimmerDetailsWidget();
-                  },
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,11 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/utils/api_service.dart';
-import '../../../../core/utils/widget/custom_error_massage.dart';
-import '../../data/manger/featch_global_tebs/global_tebs_cubit.dart';
+import 'package:news_app/core/utils/api_service.dart';
+import 'package:news_app/core/utils/widget/custom_error_massage.dart';
+import 'package:news_app/features/home/data/manger/featch_global_tebs/global_tebs_cubit.dart';
+import 'package:news_app/features/home/presentation/shimmer/view/shimmer_global_tabs.dart';
+import 'package:news_app/features/home/presentation/tabs/widgets/switch_widget.dart';
+
 import 'widgets/card_details_widget.dart';
-import '../shimmer/view/shimmer_global_tabs.dart';
 
 class GlobalTabs extends StatelessWidget {
   const GlobalTabs({super.key});
@@ -24,14 +26,22 @@ class GlobalTabs extends StatelessWidget {
         builder: (context, state) {
           if (state is FeatchGlobalTebsSuccsses) {
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+                           padding: const EdgeInsets.only(right:15 ,left:15 ,top:25 ),
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+               const    Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+
+                     Text(
                     'Global News',
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
+
+                  SwitchWidget()
+                ],),
                   const SizedBox(
                     height: 20,
                   ),

@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/features/home/presentation/tabs/widgets/switch_widget.dart';
 import '../../../../core/utils/widget/custom_error_massage.dart';
 import '../../data/manger/featch_home_slider/featch_home_slider_cubit.dart';
 import 'screens/future_programming_screen.dart';
@@ -25,7 +26,8 @@ class _HomeTabsState extends State<HomeTabs> {
       builder: (context, state) {
         if (state is FeatchHomeSliderSuccess) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+                          padding: const EdgeInsets.only(right:15 ,left:15 ,top:25 ),
+
             child: Column(
               children: [
               const  Row(
@@ -36,6 +38,7 @@ class _HomeTabsState extends State<HomeTabs> {
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
+                    SwitchWidget(),
                   
                   ],
                 ),

@@ -4,7 +4,6 @@ import '../presentation/tabs/global_tabs.dart';
 import '../presentation/tabs/home_tabs.dart';
 import '../presentation/tabs/profile_tabs.dart';
 import '../presentation/tabs/search_tabs.dart';
-import '../presentation/tabs/widgets/switch_widget.dart';
 
 class GNavBarView extends StatefulWidget {
   const GNavBarView({super.key});
@@ -26,15 +25,6 @@ class _GNavBarViewState extends State<GNavBarView> {
     final theme = Theme.of(context);
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: theme.scaffoldBackgroundColor,
-          actions: const [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: SwitchWidget(),
-            )
-          ],
-        ),
         body: listOptions.elementAt(_currentIndex),
         bottomNavigationBar: SafeArea(
           child: Container(
