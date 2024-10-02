@@ -28,23 +28,15 @@ class _HomeTabsState extends State<HomeTabs> {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               children: [
-                Row(
+              const  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                     Text(
                       'Iphone News',
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      'View all',
-                      style: TextStyle(
-                        decoration:TextDecoration.underline,
-                        decorationColor: theme.primaryColor,
-                        decorationThickness: 2,
-                          color: theme.primaryColor,
-                          fontWeight: FontWeight.bold,),
-                    ),
+                  
                   ],
                 ),
                 const SizedBox(
@@ -54,7 +46,7 @@ class _HomeTabsState extends State<HomeTabs> {
                   options: CarouselOptions(
                     autoPlay: true,
                     viewportFraction: 0.90,
-                    autoPlayInterval: const Duration(seconds: 5),
+                    autoPlayInterval: const Duration(seconds: 3),
                     height: 200,
                     onPageChanged: (index, reason) {
                       setState(() {
@@ -108,7 +100,7 @@ class _HomeTabsState extends State<HomeTabs> {
                         style: TextStyle(
                             decoration:TextDecoration.underline,
                           decorationColor: theme.primaryColor,
-                          decorationThickness: 2,
+                          decorationThickness: 1.5,
                             color: theme.primaryColor,
                             fontWeight: FontWeight.bold),
                       ),

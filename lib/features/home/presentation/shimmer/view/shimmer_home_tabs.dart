@@ -22,7 +22,7 @@ class ShimmerHomeTabs extends StatelessWidget {
                   height: 10,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  
                   children: [
                     Container(
                       height: 25,
@@ -32,14 +32,7 @@ class ShimmerHomeTabs extends StatelessWidget {
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
-                    Container(
-                      height: 15,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                    ),
+                  
                   ],
                 ),
                 const SizedBox(

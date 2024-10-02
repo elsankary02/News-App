@@ -8,7 +8,7 @@ class ApiService {
 
   Future<Map<String, dynamic>> newsService({required String endPoint}) async {
     final response = await _dio
-        .get('$_baseUrl?q=$endPoint&sortBy=publishedAt&apiKey=$apiKey');
+        .get('$_baseUrl?q=$endPoint&language=en&sortBy=publishedAt&apiKey=$apiKey');
     return response.data;
   }
 }
