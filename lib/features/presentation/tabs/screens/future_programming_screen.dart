@@ -21,7 +21,7 @@ class FutureProgrammingScreen extends StatelessWidget {
             GestureDetector(
               onTap: () => Navigator.of(context).pop(),
               child: Icon(Icons.arrow_back_ios_rounded , color: theme.primaryColor ,)),
-                            SizedBox(height: 15,),
+                           const SizedBox(height: 15,),
             Text(
               'Future Programming',
               style:

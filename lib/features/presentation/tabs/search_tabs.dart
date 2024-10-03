@@ -37,28 +37,28 @@ class SearchTabs extends StatelessWidget {
                 ),
               ),
 
-                  SwitchWidget(),
+              const    SwitchWidget(),
                 ],),
-              Text(
+           const   Text(
                 'News from all around the world ',
                 style: TextStyle(
                   color: Colors.grey,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+           const   SizedBox(
                 height: 20,
               ),
-              TextFiledWidget(),
-              SizedBox(
+            const  TextFiledWidget(),
+            const  SizedBox(
                 height: 20,
               ),
-              SearchTabsWidget(),
-              SizedBox(
+             const SearchTabsWidget(),
+             const SizedBox(
                 height: 20,
               ),
-              SearchResultWidget(),
-              SizedBox(
+             const SearchResultWidget(),
+             const SizedBox(
                 height: 15,
               ),
             ],
