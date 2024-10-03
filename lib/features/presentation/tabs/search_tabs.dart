@@ -19,7 +19,7 @@ class SearchTabs extends StatelessWidget {
         create: (context) => FetchSearchTebsCubit(ApiService(Dio(),),)
           ..fetchSearch(category: 'business'),
         child:  Padding(
-                     padding:  EdgeInsets.only(right:15 ,left:15 ,top:25 ),
+                     padding:  const EdgeInsets.only(right:15 ,left:15 ,top:25 ),
 
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

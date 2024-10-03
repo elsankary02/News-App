@@ -26,9 +26,9 @@ class GlobalTabs extends StatelessWidget {
       child: BlocBuilder<FeatchGlobalTebsCubit, FeatchGlobalTebsState>(
         builder: (context, state) {
           if (state is FeatchGlobalTebsSuccsses) {
-            return SafeArea(
-              child: Padding(
-                             padding:  EdgeInsets.only(right:15 ,left:15 ,top:25 ),
+            return  SafeArea(
+              child: Padding(   
+                   padding:const  EdgeInsets.only(right:15 ,left:15 ,top:25 ),
               
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,9 +42,9 @@ class GlobalTabs extends StatelessWidget {
                       style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color: theme.primaryColor),
                     ),
               
-                    SwitchWidget()
+                  const  SwitchWidget()
                   ],),
-                    const SizedBox(
+                 const    SizedBox(
                       height: 20,
                     ),
                     Expanded(

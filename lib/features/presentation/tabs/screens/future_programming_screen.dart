@@ -11,12 +11,12 @@ class FutureProgrammingScreen extends StatelessWidget {
     return   Scaffold(body: 
      SafeArea(
        child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding:const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
        
-         SizedBox(height: 15,),
+       const  SizedBox(height: 15,),
        
             GestureDetector(
               onTap: () => Navigator.of(context).pop(),
@@ -28,11 +28,11 @@ class FutureProgrammingScreen extends StatelessWidget {
                   TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: theme.primaryColor),
             ),
         
-           SizedBox(
+         const  SizedBox(
                       height: 10,
                     ),
         
-                     FutureProgrammingWidget(),
+                   const  FutureProgrammingWidget(),
           ],
         ),
            ),

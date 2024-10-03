@@ -39,7 +39,7 @@ class _HomeTabsState extends State<HomeTabs> {
                         style:
                             TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: theme.primaryColor),
                       ),
-                      SwitchWidget(),
+                     const SwitchWidget(),
                     
                     ],
                   ),
