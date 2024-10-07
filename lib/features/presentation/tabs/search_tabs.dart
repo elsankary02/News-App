@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/features/presentation/home/data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
 import 'package:news_app/features/presentation/tabs/widgets/switch_widget.dart';
+
 import '../../../../core/utils/api_service.dart';
 import 'widgets/search_result_widget.dart';
 import 'widgets/search_tabs_widget.dart';
@@ -13,52 +14,51 @@ class SearchTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-     final theme = Theme.of(context);
+    final theme = Theme.of(context);
     return BlocProvider<FetchSearchTebsCubit>(
-        create: (context) => FetchSearchTebsCubit(ApiService(Dio(),),)
-          ..fetchSearch(category: 'business'),
-        child:  Padding(
-                     padding:  const EdgeInsets.only(right:15 ,left:15 ,top:25 ),
-
+        create: (context) => FetchSearchTebsCubit(
+              ApiService(
+                Dio(),
+              ),
+            )..fetchSearch(category: 'business'),
+        child: Padding(
+          padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
                   Text(
-                'Discover',
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.bold,
-                  color: theme.primaryColor
-                ),
+                    'Discover',
+                    style: TextStyle(
+                        fontSize: 45,
+                        fontWeight: FontWeight.bold,
+                        color: theme.primaryColor),
+                  ),
+                  const SwitchWidget(),
+                ],
               ),
-
-              const    SwitchWidget(),
-                ],),
-           const   Text(
+              const Text(
                 'News from all around the world ',
                 style: TextStyle(
                   color: Colors.grey,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-           const   SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-            const  TextFiledWidget(),
-            const  SizedBox(
+              const TextFiledWidget(),
+              const SizedBox(
                 height: 20,
               ),
-             const SearchTabsWidget(),
-             const SizedBox(
+              const SearchTabsWidget(),
+              const SizedBox(
                 height: 20,
               ),
-             const SearchResultWidget(),
-             const SizedBox(
+              const SearchResultWidget(),
+              const SizedBox(
                 height: 15,
               ),
             ],

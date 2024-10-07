@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/constant.dart';
 import 'package:news_app/features/presentation/shimmer/widget/shimmer_details_widget.dart';
-
 import 'package:shimmer/shimmer.dart';
 
 class CardDetailsShimmer extends StatelessWidget {

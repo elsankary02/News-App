@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/core/utils/api_service.dart';
 import 'package:news_app/core/utils/widget/custom_error_massage.dart';
@@ -15,6 +16,8 @@ class GlobalTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return BlocProvider(
       create: (BuildContext context) {
         return FeatchGlobalTebsCubit(
@@ -26,25 +29,26 @@ class GlobalTabs extends StatelessWidget {
       child: BlocBuilder<FeatchGlobalTebsCubit, FeatchGlobalTebsState>(
         builder: (context, state) {
           if (state is FeatchGlobalTebsSuccsses) {
-            return  SafeArea(
-              child: Padding(   
-                   padding:const  EdgeInsets.only(right:15 ,left:15 ,top:25 ),
-              
+            return SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-              
-                       Text(
-                      'Global News',
-                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color: theme.primaryColor),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Global News',
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: theme.primaryColor),
+                        ),
+                        const SwitchWidget()
+                      ],
                     ),
-              
-                  const  SwitchWidget()
-                  ],),
-                 const    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Expanded(

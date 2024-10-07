@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/constant.dart';
 import 'package:news_app/core/utils/widget/custom_shimmer.dart';
 import 'package:news_app/features/presentation/home/data/models/news_models.dart';
+
 import 'icon_and_date.dart';
 
 class CardDetailsWidget extends StatelessWidget {
@@ -41,17 +42,19 @@ class CardDetailsWidget extends StatelessWidget {
                   color: AppColors.grey,
                 ),
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(
+                height: 10,
+              ),
               Text(
                 article.description!,
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 18),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: 10,),
-
-
+              const SizedBox(
+                height: 10,
+              ),
               IconAndDate(
                 date: article.publishedAt!,
               ),

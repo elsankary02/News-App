@@ -4,11 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/features/presentation/home/data/manger/featch_future_programming/future_programming_cubit.dart';
 import 'package:news_app/features/presentation/home/data/manger/featch_home_slider/featch_home_slider_cubit.dart';
 import 'package:news_app/features/presentation/home/data/manger/set_data/set_data_cubit.dart';
+
 import 'cache/cache_helper.dart';
 import 'constant.dart';
 import 'core/utils/api_service.dart';
 import 'core/utils/app_router.dart';
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

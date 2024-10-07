@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/constant.dart';
-
 import 'package:news_app/features/presentation/shimmer/widget/shimmer_details_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -10,8 +9,7 @@ class ShimmerGlobalTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-                   padding: const EdgeInsets.only(right:15 ,left:15 ,top:25 ),
-
+      padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
       child: Shimmer.fromColors(
         baseColor: AppColors.lightGrey,
         highlightColor: Colors.grey,

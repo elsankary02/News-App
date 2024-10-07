@@ -5,15 +5,14 @@ import 'package:news_app/features/presentation/tabs/home_tabs.dart';
 import 'package:news_app/features/presentation/tabs/profile_tabs.dart';
 import 'package:news_app/features/presentation/tabs/search_tabs.dart';
 
-
-class GNavBarView extends StatefulWidget {
-  const GNavBarView({super.key});
+class GNavBar extends StatefulWidget {
+  const GNavBar({super.key});
 
   @override
-  State<GNavBarView> createState() => _GNavBarViewState();
+  State<GNavBar> createState() => _GNavBarState();
 }
 
-class _GNavBarViewState extends State<GNavBarView> {
+class _GNavBarState extends State<GNavBar> {
   int _currentIndex = 0;
   List<Widget> listOptions = <Widget>[
     const HomeTabs(),
@@ -51,20 +50,24 @@ class _GNavBarViewState extends State<GNavBarView> {
                 tabBackgroundColor: theme.primaryColor,
                 padding: const EdgeInsets.all(8),
                 gap: 8,
-                tabs: const [
+                tabs: [
                   GButton(
+                    iconColor: theme.primaryColor,
                     icon: Icons.home,
                     text: 'Home',
                   ),
                   GButton(
                     icon: Icons.language,
+                    iconColor: theme.primaryColor,
                     text: 'Global',
                   ),
                   GButton(
                     icon: Icons.search,
+                    iconColor: theme.primaryColor,
                     text: 'Search',
                   ),
                   GButton(
+                    iconColor: theme.primaryColor,
                     icon: Icons.person_outline_rounded,
                     text: 'Profile',
                   ),
