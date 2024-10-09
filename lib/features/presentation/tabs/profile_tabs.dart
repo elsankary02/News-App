@@ -13,33 +13,31 @@ class ProfileTabs extends StatelessWidget {
     );
     final theme = Theme.of(context);
 
-    return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 60,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const SizedBox(
+          height: 60,
+        ),
+        Image.asset(
+          'assets/images/news.png',
+          color: theme.primaryColor,
+        ),
+        const SizedBox(
+          height: 100,
+        ),
+        const LinkesProfileWidget(),
+        const SizedBox(
+          height: 15,
+        ),
+        const Text(
+          'App Version : 1.0.0',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.grey,
           ),
-          Image.asset(
-            'assets/images/news.png',
-            color: theme.primaryColor,
-          ),
-          const SizedBox(
-            height: 220,
-          ),
-          const LinkesProfileWidget(),
-          const SizedBox(
-            height: 15,
-          ),
-          const Text(
-            'App Version : 1.0.0',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.grey,
-            ),
-          )
-        ],
-      ),
+        )
+      ],
     );
   }
 }

@@ -30,7 +30,7 @@ class _GNavBarState extends State<GNavBar> {
     return Scaffold(
       body: listOptions.elementAt(_currentIndex),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 5),
+        padding: const EdgeInsets.all(10),
         child: GNav(
           selectedIndex: _currentIndex,
           onTabChange: (value) {

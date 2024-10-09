@@ -32,7 +32,7 @@ class _HomeTabsState extends State<HomeTabs> {
       builder: (context, state) {
         if (state is FeatchHomeSliderSuccess) {
           return Padding(
-            padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
+            padding: const EdgeInsets.only(right: 15, left: 15, top: 40),
             child: Column(
               children: [
                 Row(

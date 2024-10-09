@@ -30,7 +30,7 @@ class GlobalTabs extends StatelessWidget {
         builder: (context, state) {
           if (state is FeatchGlobalTebsSuccsses) {
             return Padding(
-              padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
+              padding: const EdgeInsets.only(right: 15, left: 15, top: 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
