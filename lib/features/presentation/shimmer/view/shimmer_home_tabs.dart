@@ -10,7 +10,7 @@ class ShimmerHomeTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
+      padding: const EdgeInsets.only(right: 15, left: 15, top: 40),
       child: Shimmer.fromColors(
           baseColor: ColorManger.kMaterialWhiteColor,
           highlightColor: Colors.grey,
