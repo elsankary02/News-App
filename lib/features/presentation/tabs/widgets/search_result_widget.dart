@@ -21,7 +21,9 @@ class SearchResultWidget extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 20),
-                  child: CardDetailsWidget(article: state.news[index]),
+                  child: CardDetailsWidget(
+                    article: state.news[index],
+                  ),
                 );
               },
             ),

@@ -2,9 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/core/utils/widget/color_manger.dart';
 import 'package:news_app/core/utils/widget/custom_error_massage.dart';
 import 'package:news_app/features/presentation/home/data/manger/featch_home_slider/featch_home_slider_cubit.dart';
 import 'package:news_app/features/presentation/shimmer/view/shimmer_home_tabs.dart';
+import 'package:news_app/features/presentation/tabs/screens/card_details_screen.dart';
 import 'package:news_app/features/presentation/tabs/widgets/switch_widget.dart';
 
 import 'screens/future_programming_screen.dart';
@@ -63,7 +65,18 @@ class _HomeTabsState extends State<HomeTabs> {
                   ),
                   itemCount: state.news.length > 10 ? 10 : state.news.length,
                   itemBuilder: (context, index, realIndex) {
-                    return CarouselSliderWidget(articles: state.news[index]);
+                    return GestureDetector(
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => CardDetails(
+                            article: state.news[index],
+                          ),
+                        ),
+                      ),
+                      child: CarouselSliderWidget(
+                        articles: state.news[index],
+                      ),
+                    );
                   },
                 ),
                 SizedBox(
@@ -85,7 +98,7 @@ class _HomeTabsState extends State<HomeTabs> {
                             shape: BoxShape.circle,
                             color: index == carouselSliderIndix
                                 ? theme.primaryColor
-                                : Colors.grey,
+                                : ColorManger.kgrey,
                           ),
                         );
                       },

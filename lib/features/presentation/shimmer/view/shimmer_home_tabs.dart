@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/constant.dart';
+import 'package:news_app/core/utils/widget/color_manger.dart';
 import 'package:news_app/features/presentation/shimmer/widget/shimmer_details_widget.dart';
 import 'package:news_app/features/presentation/shimmer/widget/shimmer_slider_widget.dart';
 import 'package:shimmer/shimmer.dart';
@@ -12,7 +12,7 @@ class ShimmerHomeTabs extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 15, left: 15, top: 25),
       child: Shimmer.fromColors(
-          baseColor: AppColors.lightGrey,
+          baseColor: ColorManger.kMaterialWhiteColor,
           highlightColor: Colors.grey,
           period: const Duration(seconds: 2),
           child: SafeArea(
@@ -30,6 +30,14 @@ class ShimmerHomeTabs extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    Container(
+                      height: 30,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   ],

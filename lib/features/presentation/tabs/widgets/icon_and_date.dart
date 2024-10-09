@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../constant.dart';
-import '../../../../../core/helpers/date_formate.dart';
+import 'package:news_app/core/helpers/date_formate.dart';
+import 'package:news_app/core/utils/widget/color_manger.dart';
 
 class IconAndDate extends StatelessWidget {
   final String date;
@@ -23,7 +22,7 @@ class IconAndDate extends StatelessWidget {
             formatDate(date),
             style: const TextStyle(
               fontWeight: FontWeight.bold,
-              color: AppColors.grey,
+              color: ColorManger.kgrey,
             ),
           ),
         ],

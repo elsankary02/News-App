@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/core/utils/widget/color_manger.dart';
 import 'package:news_app/features/presentation/home/data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
 
-import '../../../../../constant.dart';
 import 'details_tabs_widget.dart';
 
 class SearchTabsWidget extends StatefulWidget {
@@ -46,16 +46,18 @@ class _SearchTabsWidgetState extends State<SearchTabsWidget> {
         setState(
           () {
             _currentIndex = index;
-            BlocProvider.of<FetchSearchTebsCubit>(context)
-                .fetchSearch(category: tabs[index]);
+            BlocProvider.of<FetchSearchTebsCubit>(context).fetchSearch(
+              category: tabs[index],
+            );
           },
         );
       },
       child: DetailsTabsWidget(
         text: tabs[index],
         colorText: _currentIndex == index ? Colors.white : Colors.grey,
-        colorTybe:
-            _currentIndex == index ? theme.primaryColor : AppColors.lightGrey,
+        colorTybe: _currentIndex == index
+            ? theme.primaryColor
+            : ColorManger.klightGrey,
       ),
     );
   }

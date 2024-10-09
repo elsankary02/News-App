@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../constant.dart';
+import 'package:news_app/core/utils/widget/color_manger.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CustomShimmer extends StatelessWidget {
@@ -8,7 +8,7 @@ class CustomShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: AppColors.lightGrey,
+      baseColor: ColorManger.klightGrey,
       highlightColor: Colors.grey,
       child: SizedBox(
         height: 200,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:news_app/constant.dart';
+import 'package:news_app/core/utils/widget/color_manger.dart';
 import 'package:news_app/features/presentation/home/data/manger/featch_search_tabs/featch_search_tabs_cubit.dart';
 
 class TextFiledWidget extends StatelessWidget {
@@ -18,7 +18,7 @@ class TextFiledWidget extends StatelessWidget {
       style: const TextStyle(color: Colors.black),
       decoration: InputDecoration(
         filled: true,
-        fillColor: AppColors.lightGrey,
+        fillColor: ColorManger.klightGrey,
         hintText: 'Search',
         hintStyle: const TextStyle(color: Colors.grey),
         prefixIcon: Icon(
@@ -30,12 +30,12 @@ class TextFiledWidget extends StatelessWidget {
           color: theme.primaryColor,
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColors.lightGrey),
+          borderSide: const BorderSide(color: ColorManger.klightGrey),
           borderRadius: BorderRadius.circular(30),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: AppColors.lightGrey,
+            color: ColorManger.klightGrey,
           ),
           borderRadius: BorderRadius.circular(30),
         ),

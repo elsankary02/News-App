@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:news_app/features/presentation/tabs/global_tabs.dart';
 import 'package:news_app/features/presentation/tabs/home_tabs.dart';
@@ -22,59 +23,48 @@ class _GNavBarState extends State<GNavBar> {
   ];
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    );
     final theme = Theme.of(context);
-    return SafeArea(
-      child: Scaffold(
-        body: listOptions.elementAt(_currentIndex),
-        bottomNavigationBar: SafeArea(
-          child: Container(
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 20,
-                  color: Colors.black.withOpacity(0.1),
-                ),
-              ],
+    return Scaffold(
+      body: listOptions.elementAt(_currentIndex),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 5),
+        child: GNav(
+          selectedIndex: _currentIndex,
+          onTabChange: (value) {
+            setState(() {
+              _currentIndex = value;
+            });
+          },
+          activeColor: theme.hintColor,
+          color: Colors.grey,
+          tabBackgroundColor: theme.primaryColor,
+          padding: const EdgeInsets.all(8),
+          gap: 8,
+          tabs: [
+            GButton(
+              iconColor: theme.primaryColor,
+              icon: Icons.home,
+              text: 'Home',
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: GNav(
-                selectedIndex: _currentIndex,
-                onTabChange: (value) {
-                  setState(() {
-                    _currentIndex = value;
-                  });
-                },
-                activeColor: theme.hintColor,
-                color: Colors.grey,
-                tabBackgroundColor: theme.primaryColor,
-                padding: const EdgeInsets.all(8),
-                gap: 8,
-                tabs: [
-                  GButton(
-                    iconColor: theme.primaryColor,
-                    icon: Icons.home,
-                    text: 'Home',
-                  ),
-                  GButton(
-                    icon: Icons.language,
-                    iconColor: theme.primaryColor,
-                    text: 'Global',
-                  ),
-                  GButton(
-                    icon: Icons.search,
-                    iconColor: theme.primaryColor,
-                    text: 'Search',
-                  ),
-                  GButton(
-                    iconColor: theme.primaryColor,
-                    icon: Icons.person_outline_rounded,
-                    text: 'Profile',
-                  ),
-                ],
-              ),
+            GButton(
+              icon: Icons.language,
+              iconColor: theme.primaryColor,
+              text: 'Global',
             ),
-          ),
+            GButton(
+              icon: Icons.search,
+              iconColor: theme.primaryColor,
+              text: 'Search',
+            ),
+            GButton(
+              iconColor: theme.primaryColor,
+              icon: Icons.person_outline_rounded,
+              text: 'Profile',
+            ),
+          ],
         ),
       ),
     );

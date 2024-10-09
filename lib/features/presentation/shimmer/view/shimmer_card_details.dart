@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/constant.dart';
+import 'package:news_app/core/utils/widget/color_manger.dart';
 import 'package:news_app/features/presentation/shimmer/widget/shimmer_details_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -9,7 +9,7 @@ class CardDetailsShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: AppColors.lightGrey,
+      baseColor: ColorManger.klightGrey,
       highlightColor: Colors.grey,
       period: const Duration(seconds: 2),
       child: SafeArea(
